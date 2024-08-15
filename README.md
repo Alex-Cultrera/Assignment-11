@@ -1,26 +1,4 @@
-# Assignment 11 Starter
 
-To use this template:
-
-- Click on the green `Use this template` button.
-
-- Name your new project `Assignment11` or whatever convention you use to name your assignment projects.
-
-- This will create a repository on github for your assignment. Clone this remote repository down to your local computer, as you would clone any other repository. Place it on your computer in the same folder as your other coderscampus assignments.
-
-- Import into Eclipse or open with VSCode or IntelliJ as you would any other Spring boot maven project.
-
-__You now have the starting code for Assignment 11. Follow instructions in the assignment definition to complete this project.__
-
-## CAUTION!!!
-
-This assignment currently has a bug - sorta.
-
-All of the java packages are `com.codercampus...` instead of `com.coderscampus...` 
-
-This is technically a valid package name, but it throws students off, because everything else in the bootcamp is `com.coderscampus...`
-
-To keep yourself from spending hours wondering why your code is not working, please use `com.codercampus...` for your package name, rather than `com.coderscampus...`
 
 ## Troubleshooting
 
