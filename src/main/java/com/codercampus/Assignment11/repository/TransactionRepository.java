@@ -34,18 +34,18 @@ public class TransactionRepository {
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		} 
-		
 	}
 
 	public Transaction save(Transaction transaction) {
-        return transaction;
+        transactions.add(Math.toIntExact(transaction.getId()), transaction);
+		return transaction;
     }
 
-	public Transaction findById(Integer transactionId) {
-        return null;
+	public Transaction findById(Long transactionId) {
+        return transactions.get(Math.toIntExact(transactionId));
     }
 
-//	public void delete(Integer transactionId) {
+//	public void delete(Long transactionId) {
 //		return null;
 //	}
 }
