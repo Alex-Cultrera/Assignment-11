@@ -29,8 +29,4 @@ public class TransactionService {
         return transactionRepo.findAll();
     }
 
-//    public void delete(Integer transactionId) {
-//        transactionRepo.delete(transactionId);
-//    }
-
 }

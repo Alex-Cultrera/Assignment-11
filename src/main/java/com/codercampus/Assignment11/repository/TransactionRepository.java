@@ -49,10 +49,7 @@ public class TransactionRepository {
     }
 
 	public Transaction findById(Long transactionId) {
-        return transactions.get(Math.toIntExact(transactionId));
+        return transactions.get(Math.toIntExact(transactionId)-1);
     }
 
-//	public void delete(Long transactionId) {
-//		return null;
-//	}
 }

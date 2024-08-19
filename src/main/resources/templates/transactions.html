@@ -1,79 +1,52 @@
-<html xmlns:th="http://thymeleaf.org">
-	<head>
-		<title>Online Bank</title>
-		<link rel="stylesheet" href="/css/transactions.css"/>
-	</head>
-	<body>
-		<h2>Transaction History</h2>
-		
-		<table>
+<html xmlns:th="http://thymeleaf.org" lang="">
+<head>
+    <title>Online Bank</title>
+    <link rel="stylesheet" href="/css/transactions.css"/>
+</head>
+<body>
+<h2>Transaction History</h2>
 
-			<tr>
-				<th>ID</th>
-				<th>Date</th>
-				<th>Retailer</th>
-				<th>Funds In</th>
-				<th>Funds Out</th>
-			</tr>
-			<!-- These 4 rows below are for demonstration purposes only
-			     You will need to edit the code below in order to make
-			     it dynamically list ALL 100 transactions from the Repo -->
-			<tr th:each="storedTransaction : ${transactions }">
+<table>
 
-				<td th:inline="text">
-					<a th:href="@{/transactions/{id}(id=${storedTransaction.id})}">[[${storedTransaction.id}]]</a>
-				</td>
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Retailer</th>
+        <th>Funds In</th>
+        <th>Funds Out</th>
+    </tr>
+    <tr th:each="storedTransaction : ${transactions }">
 
-				<td>
-					[[${storedTransaction.date}]]
-				</td>
+        <td th:inline="text">
+            <a th:href="@{/transactions/{id}(id=${storedTransaction.id})}">[[${storedTransaction.id}]]</a>
+        </td>
 
-				<td>
-					[[${storedTransaction.retailer}]]
-				</td>
+        <td>
+            [[${storedTransaction.date}]]
+        </td>
 
-				<td>
-					<a th:if="${storedTransaction.type == 'C'}">
-						[[${storedTransaction.amount}]]
-					</a>
-					<a th:unless="${storedTransaction.type == 'C'}">
-					</a>
-				</td>
+        <td>
+            [[${storedTransaction.retailer}]]
+        </td>
 
-				<td>
-					<a th:if="${storedTransaction.type == 'D'}">
-						[[${storedTransaction.amount}]]
-					</a>
-					<a th:unless="${storedTransaction.type == 'D'}">
-					</a>
-				</td>
+        <td>
+            <a th:if="${storedTransaction.type == 'C'}">
+                [[${storedTransaction.amount}]]
+            </a>
+            <a th:unless="${storedTransaction.type == 'C'}">
+            </a>
+        </td>
 
-			</tr>
+        <td>
+            <a th:if="${storedTransaction.type == 'D'}">
+                [[${storedTransaction.amount}]]
+            </a>
+            <a th:unless="${storedTransaction.type == 'D'}">
+            </a>
+        </td>
 
+    </tr>
 
-
-<!--			<tr>-->
-<!--				<td><a href="/transactions/1">1</a></td>-->
-<!--				<td>2020-01-02T11:36:58</td>-->
-<!--				<td>Amazon</td>-->
-<!--				<td></td>-->
-<!--				<td>52.08</td>-->
-<!--			</tr>-->
-<!--			<tr>-->
-<!--				<td><a href="/transactions/38">38</a></td>-->
-<!--				<td>2020-01-05T07:29:36</td>-->
-<!--				<td>Albertsons</td>-->
-<!--				<td>89.54</td>-->
-<!--				<td></td>-->
-<!--			</tr>-->
-<!--			<tr>-->
-<!--				<td><a href="/transactions/100">100</a></td>-->
-<!--				<td>2020-01-06T14:48:53</td>-->
-<!--				<td>Aldi</td>-->
-<!--				<td>38.50</td>-->
-<!--				<td></td>-->
-<!--			</tr>-->
-			
-		</table>
-	</body>
+</table>
+</body>
 </html>
