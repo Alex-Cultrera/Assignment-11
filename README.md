@@ -1,4 +1,4 @@
-# Bank Transaction History Viewer
+# Bank Transaction History Viewer 
 
 Project where I created an online banking transaction history viewer using Spring MVC where user can click into each transaction to view a new page displaying the full details of that transaction, and from there the user can click back to view the Transaction History page again
 
